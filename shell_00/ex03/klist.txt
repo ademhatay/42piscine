@@ -1,0 +1,5 @@
+Credentials cache: API:2B9A2AAF-2D7D-439C-9F46-C75C50FEF949
+        Principal: ahatay@42KOCAELI.COM.TR
+
+  Issued                Expires             Flags    Principal
+Nov 22 13:56:49 2021  Nov 22 23:56:44 2021  FPIA   krbtgt/42KOCAELI.COM.TR@42KOCAELI.COM.TR
