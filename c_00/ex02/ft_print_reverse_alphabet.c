@@ -6,7 +6,7 @@
 /*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:53:05 by ahatay            #+#    #+#             */
-/*   Updated: 2021/11/24 15:13:24 by ahatay           ###   ########.fr       */
+/*   Updated: 2021/11/24 17:19:49 by ahatay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,4 @@ void	 ft_print_reverse_alphabet(void)
 		ft_print(z);
 		z--;
 	}
-}
-
-int main()
-{
-	ft_print_reverse_alphabet();
-	return 0;
 }
