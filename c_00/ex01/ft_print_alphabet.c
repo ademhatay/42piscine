@@ -5,26 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 14:28:35 by ahatay            #+#    #+#             */
-/*   Updated: 2021/11/24 14:43:40 by ahatay           ###   ########.fr       */
+/*   Created: 2021/11/25 12:25:33 by ahatay            #+#    #+#             */
+/*   Updated: 2021/11/25 12:38:31 by ahatay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	 ft_putchar(char c)
+void	ft_putchar(char c)
 {
-		write(1,&c,1);
+	write(1, &c, 1);
 }
 
-void 	ft_print_alphabet(void)
+void	ft_primt_alphabet(void)
 {
-	char  a;
-	a = 'a';
+	char	abc;
 
-	while ( a < 'z')
+	abc = 'a';
+	while (abc < 'z')
 	{
-		ft_putchar(a);
-		a++;
+		ft_putchar(abc);
+		abc ++;
 	}
 }
