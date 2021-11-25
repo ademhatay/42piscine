@@ -6,7 +6,7 @@
 /*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:37:37 by ahatay            #+#    #+#             */
-/*   Updated: 2021/11/24 17:37:40 by ahatay           ###   ########.fr       */
+/*   Updated: 2021/11/25 11:33:10 by ahatay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,4 @@ void	 ft_is_negative(int n)
 	{
 		ft_putchar(p);
 	}
-}
-
-int main()
-{
-	ft_is_negative(-5);
-	return 0;
 }
