@@ -1,58 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/27 21:48:34 by ahatay            #+#    #+#             */
+/*   Updated: 2021/11/27 21:50:09 by ahatay           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-void    ft_putchar(char c)
+
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write (1, &c, 1);
 }
 
-void    ft_put(int w)
+void	ft_print_comb2(void)
 {
-    if (w > 9)
-    {
-        ft_put(w / 10);
-    }
-    ft_putchar((w % 10) + '0');
-}
+	int	x;
+	int	y;
 
-void    ft_put2(int b, int a)
-{
-    if (b < 10)
-    {
-        ft_putchar('0');
-    }
-    ft_put(b);
-    ft_putchar(' ');
-    if (a < 10)
-    {
-        ft_putchar('0');
-    }
-    ft_put(a);
-    if (!(b == 98 && a == 99))
-    {
-        write(1, ", ", 2);
-    }
-}
-
-void    ft_print_comb2(void)
-{
-    int    a;
-    int    b;
-
-    b = 0;
-    while (b < 99)
-    {
-        a = b + 1;
-        while (a < 100)
-        {
-            if (b != a)
-            {
-                ft_put2(b, a);
-            }
-            a++;
-        }
-        b++;
-    }
-}
-int main(){
-    ft_print_comb2();
-    return 0;
+	x = -1;
+	while (++x <= 98)
+	{
+		y = x;
+		while (++y <= 99)
+		{
+			ft_putchar((char)((x / 10) + '0'));
+			ft_putchar((char)((x % 10) + '0'));
+			ft_putchar(' ');
+			ft_putchar((char)((y / 10) + '0'));
+			ft_putchar((char)((y % 10) + '0'));
+			if (x != 98 || y != 99)
+			{
+				write (1, ", ", 2);
+			}
+		}
+	}
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 12:25:33 by ahatay            #+#    #+#             */
-/*   Updated: 2021/11/27 23:56:52 by ahatay           ###   ########.fr       */
+/*   Created: 2021/11/27 22:21:29 by ahatay            #+#    #+#             */
+/*   Updated: 2021/11/28 01:40:23 by ahatay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,35 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char	abc;
-
-	abc = 'a';
-	while (abc <= 'z')
+	if (nb > -2147483648 || nb <= 2147483647)
 	{
-		ft_putchar(abc);
-		abc ++;
+		if (nb == -2147483648)
+		{
+			ft_putchar('-');
+			ft_putchar('2');
+			ft_putnbr(147483648);
+			return ;
+		}
+		else if (nb >= 10)
+		{
+			ft_putnbr(nb / 10);
+			ft_putnbr(nb % 10);
+		}
+		else if (nb < 0)
+		{
+			nb = -nb;
+			ft_putchar('-');
+			ft_putnbr(nb);
+		}
+		else
+			ft_putchar(nb + '0');
 	}
+}
+
+int main()
+{
+	ft_putnbr(51);
+	ft_putnbr(-42);
 }
