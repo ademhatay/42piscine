@@ -9,8 +9,8 @@ int		main(void)
 	int *a = &x;
 	int *b = &y;
 
-	printf("%d /",x);
-	printf(" %d\n",y);
+	printf("x = %d\t",x);
+	printf("y = %d\n",y);
 
 	ft_ultimate_div_mod(a, b);
 	
