@@ -22,7 +22,7 @@ int		main (void)
   int *mod = &b;
   ft_div_mod(a, b, div, mod);
 
-  printf("a  : %d",*div);
+    printf("a  : %d",*div);
 	printf("\nb : %d",*mod);
 	return (0);
 }
