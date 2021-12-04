@@ -1,0 +1,332 @@
+#include <stdio.h>
+
+/*
+int	ft_str_is_alpha(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 'A' || (str[i] > 'Z' && str[i] < 'a') || str[i] > 'z')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+int        main(void)
+{
+  char dizi[] = "merhabalar";
+  char dizi2[] = "Merhabalar";
+  char dizi3[] = "merhabalar123";
+  char dizi4[] = "1231456";
+  char dizi5[] = "";
+
+  printf("%d\n", ft_str_is_alpha(dizi));
+  printf("%d\n", ft_str_is_alpha(dizi2));
+  printf("%d\n", ft_str_is_alpha(dizi3));
+  printf("%d\n", ft_str_is_alpha(dizi4));
+  printf("%d\n", ft_str_is_alpha(dizi5));
+}
+*/
+
+// ---------------------------------------------------------------------------
+
+/*
+int	ft_str_is_lowercase(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 97 || str[i] > 122)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+int        main(void)
+{
+  char dizi[] = "merhabalar";
+  char dizi2[] = "Merhabalar";
+  char dizi3[] = "merhabalar123";
+  char dizi4[] = "1231456";
+  char dizi5[] = "";
+
+  printf("%d\n", ft_str_is_lowercase(dizi));
+  printf("%d\n", ft_str_is_lowercase(dizi2));
+  printf("%d\n", ft_str_is_lowercase(dizi3));
+  printf("%d\n", ft_str_is_lowercase(dizi4));
+  printf("%d\n", ft_str_is_lowercase(dizi5));
+}
+
+*/
+
+// ---------------------------------------------------------------------------
+
+/*
+int	ft_str_is_numeric(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < '0' || str[i] > '9')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+int        main(void)
+{
+  char dizi[] = "merhabalar";
+  char dizi2[] = "Merhabalar";
+  char dizi3[] = "merhabalar123";
+  char dizi4[] = "1231456";
+  char dizi5[] = "";
+
+  printf("%d\n", ft_str_is_numeric(dizi));
+  printf("%d\n", ft_str_is_numeric(dizi2));
+  printf("%d\n", ft_str_is_numeric(dizi3));
+  printf("%d\n", ft_str_is_numeric(dizi4));
+  printf("%d\n", ft_str_is_numeric(dizi5));
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+int	ft_str_is_printable(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 32 || str[i] > 126)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+int        main(void)
+{
+  char dizi[] = "merhabalar";
+  char dizi2[] = "Merhabalar";
+  char dizi3[] = "merhabalar123";
+  char dizi4[] = "1231¤456";
+  char dizi5[] = "";
+
+  printf("%d\n", ft_str_is_printable(dizi));
+  printf("%d\n", ft_str_is_printable(dizi2));
+  printf("%d\n", ft_str_is_printable(dizi3));
+  printf("%d\n", ft_str_is_printable(dizi4));
+  printf("%d\n", ft_str_is_printable(dizi5));
+}
+
+*/
+// ---------------------------------------------------------------------------
+/*
+int	ft_str_is_uppercase(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 65 || str[i] > 90)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+int        main(void)
+{
+  char dizi[] = "merhabalar";
+  char dizi2[] = "MEEEEE";
+  char dizi3[] = "merhabalar123";
+  char dizi4[] = "1231¤456";
+  char dizi5[] = "";
+
+  printf("%d\n", ft_str_is_uppercase(dizi));
+  printf("%d\n", ft_str_is_uppercase(dizi2));
+  printf("%d\n", ft_str_is_uppercase(dizi3));
+  printf("%d\n", ft_str_is_uppercase(dizi4));
+  printf("%d\n", ft_str_is_uppercase(dizi5));
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+char	*ft_strcapitalize(char *str)
+{
+	int	i;
+	int	a;
+
+	i = 0;
+	a = 1;
+	while (str[i])
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')
+			|| (str[i] >= '0' && str[i] <= '9'))
+		{
+			if (a && (str[i] >= 'a' && str[i] <= 'z'))
+				str[i] -= 32;
+			else if (!a && (str[i] >= 'A' && str[i] <= 'Z'))
+				str[i] += 32;
+			a = 0;
+		}
+		else
+			a = 1;
+		i++;
+	}
+	return (str);
+}
+int main()
+{
+  char dizi1[] = "salut, comment tu vas ?armut 42mots quarante-deux; cinquante+et+un";
+  printf("%s", ft_strcapitalize(dizi1));
+  return 0;
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+char	*ft_strcpy(char *dest, char	*src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+int        main(void)
+{
+  char dest1[] = "dest";
+  char src1[] = "source";
+
+  printf("%s\n%s\n\n", dest1, src1);
+  ft_strcpy(dest1, src1);
+  printf("%s\n%s", dest1, src1);
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	int				count;
+	unsigned int	i;
+
+	count = 0;
+	i = 0;
+	while (src[count] != '\0')
+		count++;
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (count);
+}
+int        main(void)
+{
+  char dest1[] = "dest";
+  char src1[] = "source";
+
+  printf("%s\n%s\n\n", dest1, src1);
+  ft_strlcpy(dest1, src1, 4);
+  printf("%s\n%s", dest1, src1);
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+char	*ft_strlowcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
+	}
+	return (str);
+}
+int main()
+{
+  char dizi[] = "HEPSINI KUCUK YAP!";
+  printf("%s", ft_strlowcase(dizi));
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
+int        main(void)
+{
+  char dest1[] = "dest";
+  char src1[] = "source";
+
+  printf("%s\n%s\n\n", dest1, src1);
+  ft_strncpy(dest1, src1, 3);
+  printf("%s\n%s", dest1, src1);
+}
+*/
+// ---------------------------------------------------------------------------
+/*
+char	*ft_strupcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
+		i++;
+	}
+	return (str);
+}
+int main()
+{
+  char dizi[] = "hepsini buyuk yap!";
+  printf("%s", ft_strupcase(dizi));
+}
+*/
