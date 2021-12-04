@@ -4,14 +4,14 @@ void    ft_ft(int *nbr);
 
 int        main (void)
 {
-    int *p_nbr;
+    int *x_nbr;
     int nbr;
 
     nbr = 21;
-    p_nbr = &nbr;
+    x_nbr = &nbr;
 
     printf("%d\n", nbr);
-    ft_ft(p_nbr);
+    ft_ft(x_nbr);
     printf("%d\n", nbr);
     return (0);
 }
