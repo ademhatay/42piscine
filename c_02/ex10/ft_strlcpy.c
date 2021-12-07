@@ -36,6 +36,6 @@ int        main(void)
   char src1[] = "source";
 
   printf("%s\n%s\n\n", dest1, src1);
-  ft_strlcpy(dest1, src1, 4);
+  ft_strlcpy(dest1, src1, 3);
   printf("%s\n%s", dest1, src1);
 }
