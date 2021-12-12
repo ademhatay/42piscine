@@ -32,13 +32,13 @@ char    *ft_strcat(char *dest, char *src)
 }
 int main()
 {
-    char dizi1[] = "1234";
-    char dizi2[] = "567890";
+    char dest2[] = "1234";
+    char source2[] = "567890";
     
-    printf("Dizilerin ilk hali:\nDizi1 = %s\nDizi2 = %s\n", dizi1, dizi2);
+    printf("Dizilerin ilk hali:\ndest2 = %s\nsource2 = %s\n", dest2, source2);
     ft_strcat(dizi1, dizi2);
     printf("-----------------------------\n");
-    printf("Dizilerin Son hali:\nDizi1 = %s\nDizi2 = %s\n", dizi1, dizi2);
+    printf("Dizilerin Son hali:\ndest2 = %s\nsource2 = %s\n", dest2, source2);
     // Son olarak dizi2 dizi1'in sonunda eklendi
     //Dizi1 aynı kaldı
 }
