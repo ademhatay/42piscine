@@ -46,6 +46,6 @@ int main(void)
   char *dizi[] = {"adem","hatay","Hatayspor", "deneme"};
   char sep[] = " -------- ";
   char *t;
-  t = ft_strjoin(3, dizi, sep);
+  t = ft_strjoin(5, dizi, sep);
   printf("%s", t);
 }
